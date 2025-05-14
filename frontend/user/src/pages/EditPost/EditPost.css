@@ -1,0 +1,106 @@
+.edit-post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.edit-post-header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.edit-post-header h1 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.edit-post-form {
+    background: var(--card-background);
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.edit-post-content {
+    min-height: 200px;
+    resize: vertical;
+    background-color: var(--input-background) !important;
+    color: var(--text-color) !important;
+}
+
+.edit-post-actions {
+    margin-top: 24px;
+    text-align: right;
+}
+
+.edit-post-actions .ant-btn {
+    min-width: 80px;
+}
+
+/* 上传组件样式 */
+.ant-upload-list {
+    margin-top: 8px;
+}
+
+.ant-upload-list-item {
+    margin-top: 8px;
+    background-color: var(--card-background) !important;
+    border-color: var(--border-color) !important;
+}
+
+.ant-upload-list-item-info {
+    padding: 8px;
+    color: var(--text-color) !important;
+}
+
+.ant-upload-list-item-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.ant-upload-select {
+    border-color: var(--border-color) !important;
+}
+
+.ant-upload-text {
+    color: var(--text-color) !important;
+}
+
+.ant-upload-hint {
+    color: var(--secondary-text-color) !important;
+}
+
+/* 日期选择器样式 */
+.ant-picker {
+    width: 100%;
+    background-color: var(--input-background) !important;
+    border-color: var(--border-color) !important;
+}
+
+.ant-picker-input > input {
+    color: var(--text-color) !important;
+}
+
+.ant-picker-suffix {
+    color: var(--secondary-text-color) !important;
+}
+
+@media (max-width: 768px) {
+    .edit-post-container {
+        padding: 16px;
+    }
+
+    .edit-post-form {
+        padding: 16px;
+    }
+
+    .ant-upload-list-item-thumbnail {
+        width: 80px;
+        height: 80px;
+    }
+}

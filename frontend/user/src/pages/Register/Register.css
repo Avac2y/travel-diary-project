@@ -1,0 +1,151 @@
+.register-page {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #a0c2dc;
+    margin: 0;
+    padding: 20px;
+    gap: 30px;
+}
+
+.app-icon {
+    padding: 30px;
+    margin-bottom: 50px;
+    width: 310px;
+    height: 310px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 310px;
+    height: 310px;
+    object-fit: cover;
+}
+
+.register-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.register-card {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register-header h2 {
+    color: #1890ff;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.register-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 16px;
+    color: #666;
+}
+
+.register-footer a {
+    color: #1890ff;
+    cursor: pointer;
+}
+
+.register-footer a:hover {
+    color: #40a9ff;
+}
+
+/* Ant Design 组件样式覆盖 */
+.ant-input-affix-wrapper {
+    border-radius: 6px;
+}
+
+.ant-input-affix-wrapper:hover,
+.ant-input-affix-wrapper:focus {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+}
+
+.ant-btn-primary {
+    height: 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #1890ff;
+    border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+    background: #40a9ff;
+    border-color: #40a9ff;
+}
+
+/* 移动端适配 */
+@media (max-width: 480px) {
+    .register-page {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .app-icon {
+        padding: 20px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .register-wrapper {
+        max-width: 100%;
+    }
+
+    .register-card {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .register-header h2 {
+        font-size: 24px;
+    }
+
+    .register-header p {
+        font-size: 14px;
+    }
+
+    .ant-input-affix-wrapper {
+        font-size: 14px;
+    }
+
+    .ant-btn-primary {
+        height: 36px;
+        font-size: 14px;
+    }
+}
+
+/* 平板适配 */
+@media (min-width: 481px) and (max-width: 768px) {
+    .app-icon {
+        width: 250px;
+        height: 250px;
+    }
+
+    .logo {
+        width: 250px;
+        height: 250px;
+    }
+}

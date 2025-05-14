@@ -1,0 +1,482 @@
+.post-detail-container {
+  padding: 16px;
+  padding-bottom: 80px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-time), color var(--transition-time);
+}
+
+/* 隐藏底部导航栏 */
+body.hide-navbar .navbar {
+  display: none !important;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.error-container {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.travel-detail {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color var(--transition-time);
+}
+
+.travel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+  background-color: var(--header-background);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color var(--transition-time), border-color var(--transition-time);
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  padding: 0 15px;
+  color: var(--text-color);
+  transition: color var(--transition-time);
+}
+
+.travel-title {
+  text-align: center;
+  margin: 0 auto !important;
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-color);
+  transition: color var(--transition-time);
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  padding: 0 16px 16px;
+  background-color: var(--card-background);
+  transition: background-color var(--transition-time);
+}
+
+.author-text {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+.author-text .ant-typography-secondary {
+  color: var(--secondary-text-color) !important;
+}
+
+.dark-mode .author-text .ant-typography {
+  color: var(--text-color) !important;
+}
+
+.media-container {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.image-carousel {
+  width: 100%;
+}
+
+.carousel-item {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-background);
+  overflow: hidden;
+  transition: background-color var(--transition-time);
+}
+
+/* 图片懒加载相关样式 */
+.lazy-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--secondary-background);
+  transition: background-color var(--transition-time), opacity 0.3s ease;
+}
+
+.lazy-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.lazy-image-container.loading {
+  background-color: var(--secondary-background);
+}
+
+.image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    var(--secondary-background) 25%, 
+    var(--card-background) 50%, 
+    var(--secondary-background) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.video-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.play-icon {
+  color: white;
+  font-size: 30px;
+}
+
+.travel-content {
+  padding: 0 16px 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  transition: color var(--transition-time);
+}
+
+/* 深色模式下游记内容文字颜色优化 */
+.dark-mode .travel-content {
+  color: var(--text-color);
+}
+
+.dark-mode .travel-content p {
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+/* Typography组件在深色模式下的优化 */
+.dark-mode .ant-typography {
+  color: var(--text-color) !important;
+}
+
+.dark-mode .ant-typography-secondary {
+  color: var(--secondary-text-color) !important;
+}
+
+.dark-mode .ant-typography-title {
+  color: var(--text-color) !important;
+}
+
+.dark-mode .ant-typography-paragraph {
+  color: var(--text-color) !important;
+  line-height: 1.8;
+}
+
+/* 底部分享按钮 */
+.bottom-share-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  background-color: var(--card-background);
+  box-shadow: 0 -2px 6px var(--shadow-color);
+  z-index: 99;
+  transition: background-color var(--transition-time), box-shadow var(--transition-time);
+}
+
+.bottom-share-button .ant-btn {
+  height: 44px;
+  font-size: 16px;
+  border-radius: 22px;
+}
+
+/* 底部操作按钮 */
+.bottom-action-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  background-color: var(--card-background);
+  box-shadow: 0 -2px 6px var(--shadow-color);
+  z-index: 99;
+  transition: background-color var(--transition-time), box-shadow var(--transition-time);
+}
+
+.action-button {
+  height: 44px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+  color: var(--text-color) !important;
+  transition: color var(--transition-time);
+}
+
+.action-button .anticon {
+  font-size: 22px;
+  margin-right: 0 !important;
+  margin-bottom: 2px;
+}
+
+.action-button span + span {
+  margin-left: 0;
+}
+
+/* 底部弹出分享菜单样式 */
+.share-drawer .ant-drawer-body {
+  padding: 0;
+}
+
+.share-drawer .ant-drawer-content {
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 16px var(--shadow-color);
+  overflow: hidden;
+  background-color: var(--card-background);
+  transition: background-color var(--transition-time), box-shadow var(--transition-time);
+}
+
+.share-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  transition: border-color var(--transition-time);
+}
+
+.drawer-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: color var(--transition-time);
+}
+
+.cancel-button {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  transition: background-color var(--transition-time), color var(--transition-time);
+}
+
+.cancel-button:hover {
+  background-color: var(--hover-color);
+}
+
+.share-options-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+}
+
+.share-options {
+  display: flex;
+  padding: 0 20px;
+  min-width: max-content;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.share-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 12px;
+  cursor: pointer;
+  width: 64px;
+  transition: transform 0.2s;
+}
+
+.share-item:hover {
+  transform: translateY(-3px);
+}
+
+.share-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: box-shadow var(--transition-time);
+}
+
+.share-icon {
+  font-size: 28px;
+  color: white;
+}
+
+.share-text {
+  font-size: 12px;
+  color: var(--secondary-text-color);
+  margin-top: 6px;
+  transition: color var(--transition-time);
+}
+
+.share-icon-wrapper.wechat {
+  background: linear-gradient(135deg, #07c160, #0baf56);
+}
+
+.share-icon-wrapper.moments {
+  background: linear-gradient(135deg, #07c160, #0a9d4f);
+  position: relative;
+}
+
+.moments-icon {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.share-icon-wrapper.qq {
+  background: linear-gradient(135deg, #12b7f5, #0f9fd8);
+}
+
+.share-icon-wrapper.weibo {
+  background: linear-gradient(135deg, #e6162d, #d01426);
+}
+
+.share-icon-wrapper.copy {
+  background: linear-gradient(135deg, #f5a623, #e09620);
+}
+
+.share-icon-wrapper.qrcode {
+  background: linear-gradient(135deg, #1890ff, #0e7bdb);
+}
+
+/* 视频模态框样式 */
+.video-modal .ant-modal-body {
+  padding: 0;
+}
+
+.video-player {
+  width: 100%;
+  background-color: black;
+}
+
+/* 视频懒加载样式 */
+.lazy-video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  background-color: #000;
+}
+
+.lazy-video-container video {
+  width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.lazy-video-container video.loading {
+  opacity: 0;
+}
+
+.lazy-video-container video.loaded {
+  opacity: 1;
+}
+
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: video-loading 1.5s infinite;
+}
+
+@keyframes video-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* 响应式适配 */
+@media (max-width: 576px) {
+  .post-detail-container {
+    padding: 8px;
+    padding-bottom: 80px;
+  }
+  
+  .travel-title {
+    font-size: 18px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    height: 350px;
+  }
+  
+  .video-thumbnail {
+    height: 350px;
+  }
+} 

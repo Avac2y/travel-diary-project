@@ -1,0 +1,4 @@
+[
+  { "username": "携大程", "password": "xdc@333", "role": "admin" },
+  { "username": "携小程", "password": "xxc@333", "role": "auditor" }
+]

@@ -1,0 +1,96 @@
+.pc-review {
+  padding: 24px;
+  font-family: sans-serif;
+}
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.filter-buttons button.active {
+  background-color: #1677ff;
+  color: white;
+}
+.filter-buttons button {
+  margin-right: 8px;
+}
+.review-card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 12px;
+  background-color: white;
+}
+.review-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+.card-left {
+  display: flex;
+}
+.card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.status {
+  font-weight: bold;
+}
+.status.pending {
+  color: #1677ff;
+}
+.status.approved {
+  color: #52c41a;
+}
+.status.rejected {
+  color: #ff4d4f;
+}
+.pagination {
+  margin-top: 20px;
+}
+.pagination button {
+  margin: 0 4px;
+}
+.pagination button.active {
+  font-weight: bold;
+  border-bottom: 2px solid #1677ff;
+}
+.status-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 3px solid #4a90e2; /* 蓝色外圈 */
+  border-radius: 50%;
+  color: #4a90e2;             /* 字体蓝色 */
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  min-width: 80px;
+  min-height: 80px;
+  line-height: 60px;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2); /* 外圈阴影 */
+  background-color: white;
+}
+
+/* 可选：不同状态不同色 */
+.status-approved {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.status-rejected {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+.img-deleted {
+  filter: grayscale(100%) brightness(80%);
+  opacity: 0.7;
+}
+.status-deleted {
+  border-color: #999;
+  color: #999;
+  background-color: #f0f0f0;
+}

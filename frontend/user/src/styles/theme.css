@@ -1,0 +1,251 @@
+/* 深色模式样式 */
+:root {
+  --primary-color: #1890ff;
+  --primary-hover: #40a9ff;
+  --background-color: #ffffff;
+  --secondary-background: #f5f5f5;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --secondary-text-color: #666666;
+  --border-color: #f0f0f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --inactive-color: #bbbbbb;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #ff4d4f;
+  --section-background: #ffffff;
+  --header-background: #ffffff;
+  --footer-background: #ffffff;
+  --toggle-background: #e6e6e6;
+  --toggle-button: #ffffff;
+  --toggle-active: #1890ff;
+  --input-background: #ffffff;
+  --hover-color: #fafafa;
+  --active-link: #1890ff;
+  --transition-time: 0.3s;
+}
+
+/* 深色模式变量 */
+.dark-mode {
+  --primary-color: #177ddc;
+  --primary-hover: #0050b3;
+  --background-color: #1f1f1f;
+  --secondary-background: #141414;
+  --card-background: #262626;
+  --text-color: #e4e4e4;
+  --secondary-text-color: #b8b8b8;
+  --border-color: #303030;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --inactive-color: #6b6b6b;
+  --success-color: #49aa19;
+  --warning-color: #d89614;
+  --error-color: #d32029;
+  --section-background: #262626;
+  --header-background: #262626;
+  --footer-background: #262626;
+  --toggle-background: #4b4b4b;
+  --toggle-button: #c9c9c9;
+  --toggle-active: #177ddc;
+  --input-background: #121212;
+  --hover-color: #303030;
+  --active-link: #177ddc;
+}
+
+/* 全局样式 - 根据当前主题设置 */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-time), color var(--transition-time);
+}
+
+/* Card 样式 */
+.ant-card,
+.card,
+.info-section {
+  background-color: var(--card-background) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-color) !important;
+  transition: all var(--transition-time);
+}
+
+.ant-card-head {
+  background-color: var(--card-background) !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+.ant-card-head-title,
+.ant-card-meta-title {
+  color: var(--text-color) !important;
+}
+
+.ant-card-meta-description {
+  color: var(--secondary-text-color) !important;
+}
+
+/* 导航栏样式 */
+.navbar {
+  background-color: var(--footer-background);
+  border-top-color: var(--border-color);
+  transition: all var(--transition-time);
+}
+
+.nav-item {
+  color: var(--secondary-text-color);
+}
+
+.nav-item.active {
+  color: var(--active-link);
+}
+
+/* 列表项样式 */
+.info-item {
+  border-bottom-color: var(--border-color);
+  transition: all var(--transition-time);
+}
+
+.info-item:hover {
+  background-color: var(--hover-color);
+}
+
+.item-text,
+.item-icon {
+  color: var(--text-color);
+  transition: color var(--transition-time);
+}
+
+.item-arrow {
+  color: var(--inactive-color);
+}
+
+/* 开关样式 */
+.toggle-switch label {
+  background-color: var(--toggle-background);
+}
+
+.toggle-switch label:before {
+  background-color: var(--toggle-button);
+}
+
+.toggle-switch input:checked + label {
+  background-color: var(--toggle-active);
+}
+
+/* 输入框样式 */
+input,
+textarea,
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector {
+  background-color: var(--input-background) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.ant-input-prefix,
+.ant-input-suffix {
+  color: var(--secondary-text-color) !important;
+}
+
+/* 按钮样式 */
+.ant-btn {
+  border-color: var(--border-color);
+}
+
+.ant-btn-text {
+  color: var(--text-color) !important;
+}
+
+.ant-btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Tag 标签样式 */
+.dark-mode .ant-tag {
+  border-color: var(--border-color);
+}
+
+/* Search 搜索框样式 */
+.ant-input-search .ant-input-search-button {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.ant-input-search .ant-input {
+  background-color: var(--input-background) !important;
+}
+
+/* Empty 空状态样式 */
+.ant-empty-description {
+  color: var(--secondary-text-color) !important;
+}
+
+/* Alert 提示样式 */
+.ant-alert {
+  background-color: var(--section-background) !important;
+  border-color: var(--border-color) !important;
+}
+
+.ant-alert-message,
+.ant-alert-description {
+  color: var(--text-color) !important;
+}
+
+/* Spin 加载样式 */
+.ant-spin {
+  color: var(--primary-color) !important;
+}
+
+/* Modal 模态框样式 */
+.ant-modal-content,
+.ant-drawer-content {
+  background-color: var(--card-background) !important;
+  color: var(--text-color) !important;
+}
+
+.ant-modal-header,
+.ant-drawer-header {
+  background-color: var(--card-background) !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+.ant-modal-title,
+.ant-drawer-title {
+  color: var(--text-color) !important;
+}
+
+.ant-modal-close,
+.ant-drawer-close {
+  color: var(--text-color) !important;
+}
+
+.ant-modal-footer {
+  border-top-color: var(--border-color) !important;
+}
+
+/* Divider 分割线样式 */
+.ant-divider {
+  border-color: var(--border-color) !important;
+}
+
+/* Form 表单样式 */
+.ant-form-item-label > label {
+  color: var(--text-color) !important;
+}
+
+.ant-form-item-explain-error {
+  color: var(--error-color) !important;
+}
+
+/* 头部样式 */
+.personal-info-header,
+.header,
+.travel-header {
+  background-color: var(--header-background);
+  border-bottom-color: var(--border-color);
+}
+
+/* 添加过渡效果 */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+} 

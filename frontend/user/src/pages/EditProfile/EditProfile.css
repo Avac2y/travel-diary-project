@@ -1,0 +1,134 @@
+.edit-profile-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--secondary-background);
+  padding-bottom: 40px;
+}
+
+.edit-profile-header {
+  background-color: var(--header-background);
+  padding: 16px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.edit-profile-header h1 {
+  margin: 0;
+  margin-left: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.back-button {
+  color: var(--text-color);
+}
+
+.edit-profile-content {
+  padding: 20px 16px;
+}
+
+.avatar-upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.current-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 2px solid var(--border-color);
+  background-color: var(--card-background);
+}
+
+.current-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edit-profile-form {
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.edit-profile-form .ant-form-item-label > label {
+  color: var(--text-color);
+}
+
+.edit-profile-form .ant-input {
+  background-color: var(--secondary-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.edit-profile-form .ant-input-affix-wrapper {
+  background-color: var(--secondary-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.edit-profile-form .ant-input-affix-wrapper > input.ant-input {
+  background-color: transparent;
+}
+
+.edit-profile-form .ant-input-password-icon {
+  color: var(--secondary-text);
+}
+
+.submit-button {
+  margin-top: 10px;
+}
+
+/* 修改Ant Design组件在深色模式下的颜色 */
+.dark-mode .ant-btn {
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.dark-mode .ant-btn-text:hover, 
+.dark-mode .ant-btn-text:focus {
+  background-color: var(--hover-color);
+}
+
+.dark-mode .ant-btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.dark-mode .ant-upload.ant-upload-select-picture-card {
+  background-color: var(--secondary-background);
+  border-color: var(--border-color);
+}
+
+.dark-mode .ant-form-item-explain-error {
+  color: var(--error-color);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--secondary-background);
+}
+
+/* 响应式 */
+@media (min-width: 768px) {
+  .edit-profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+} 

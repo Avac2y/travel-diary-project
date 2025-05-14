@@ -1,0 +1,349 @@
+.home-container {
+  padding: 16px;
+  padding-bottom: 60px;
+  background-color: var(--secondary-background);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+.search-container {
+  margin-bottom: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--secondary-background);
+  padding: 10px 0;
+}
+
+.search-input {
+  width: 100%;
+}
+
+.travels-container {
+  margin-top: 10px;
+}
+
+.waterfall-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 默认始终显示两列 */
+  grid-gap: 16px;
+  padding: 4px;
+}
+
+.waterfall-item {
+  break-inside: avoid;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  margin-bottom: 16px;
+}
+
+.travel-card {
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background-color: var(--card-background) !important;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* 改为自适应高度 */
+  margin: 0;
+  padding: 0;
+}
+
+.travel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.travel-card-image-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0%; /* 增加图片比例 */
+  background-color: var(--secondary-background);
+  border-radius: 12px 12px 0 0; /* 只设置顶部圆角 */
+}
+
+.travel-card-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.travel-card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.travel-card:hover .travel-card-cover img {
+  transform: scale(1.08);
+}
+
+.travel-card-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-background);
+}
+
+.travel-card-title {
+  margin-bottom: 8px !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+  height: 44px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: var(--text-color) !important;
+}
+
+.dark-mode .travel-card-title {
+  color: var(--text-color) !important;
+}
+
+.travel-card-author {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--secondary-text-color);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+}
+
+.author-avatar {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.author-name {
+  margin-left: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  max-width: calc(100% - 40px); /* 确保文本不会溢出 */
+}
+
+.dark-mode .author-name {
+  color: var(--secondary-text-color);
+}
+
+/* 图片懒加载相关样式 */
+.image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary-background) 25%, var(--hover-color) 50%, var(--secondary-background) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* 错误反馈相关样式 */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--shadow-color);
+  margin: 20px 0;
+}
+
+.error-container .ant-alert {
+  margin-bottom: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.retry-button {
+  margin-top: 16px;
+  min-width: 120px;
+}
+
+.load-more-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.load-more-error-alert {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.retry-load-more-button {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.retry-load-more-button:hover {
+  background-color: var(--hover-color);
+  border-radius: 4px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: var(--text-color);
+}
+
+/* 无限滚动加载相关样式 */
+.loading-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  color: var(--secondary-text-color);
+}
+
+.loading-text {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.no-more-container {
+  text-align: center;
+  padding: 20px 0;
+  color: var(--secondary-text-color);
+  font-size: 14px;
+}
+
+.no-more-text {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.no-more-text:before,
+.no-more-text:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.no-more-text:before {
+  left: -20px;
+}
+
+.no-more-text:after {
+  right: -20px;
+}
+
+/* 媒体查询，根据屏幕宽度调整布局，保证始终至少显示双列 */
+@media (min-width: 576px) {
+  .waterfall-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .waterfall-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .waterfall-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+  }
+  
+  .waterfall-item {
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .waterfall-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 28px;
+  }
+  
+  .waterfall-item {
+    margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .waterfall-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+  }
+  
+  .waterfall-item {
+    margin-bottom: 32px;
+  }
+}
+
+/* 移动设备优化，确保始终保持双列 */
+@media (max-width: 575px) {
+  .waterfall-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .waterfall-item {
+    margin-bottom: 10px;
+  }
+  
+  .travel-card-title {
+    font-size: 14px !important;
+    height: 38px;
+  }
+  
+  .author-avatar {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .travel-card-content {
+    padding: 8px;
+  }
+  
+  .travel-card-author {
+    margin-top: 4px;
+    padding-top: 4px;
+  }
+}
+
+.dark-mode .travel-card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .travel-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+} 
